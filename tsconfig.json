@@ -13,7 +13,7 @@
     "target": "es5",
     "declaration": true,
     "esModuleInterop": true,
-    "outDir": "./lib"
+    "outDir": "./dist"
   },
   "exclude": [
     "node_modules"
