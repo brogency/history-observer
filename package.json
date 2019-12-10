@@ -1,0 +1,38 @@
+{
+  "name": "history-observer",
+  "version": "0.0.1",
+  "description": "Watcher for history and location.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brogency/history-observer.git"
+  },
+  "keywords": [
+    "history",
+    "location",
+    "observer",
+    "watcher",
+    "browser"
+  ],
+  "author": "acrius@mail.ru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brogency/history-observer/issues"
+  },
+  "homepage": "https://github.com/brogency/history-observer#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/uuid": "^3.4.6",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "uuid": "^3.3.3"
+  },
+  "files": ["lib/**/*"]
+}

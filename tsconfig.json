@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [
+      "dom",
+      "es2019"
+    ],
+    "module": "esnext",
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "declaration": true,
+    "esModuleInterop": true,
+    "outDir": "./lib"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src"
+  ]
+}
