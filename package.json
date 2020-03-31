@@ -1,6 +1,6 @@
 {
   "name": "history-observer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Watcher for history and location.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,11 +28,14 @@
   "devDependencies": {
     "@types/lodash": "^4.14.149",
     "@types/uuid": "^3.4.6",
+    "jest": "^25.2.2",
     "typescript": "^3.7.3"
   },
   "dependencies": {
     "lodash": "^4.17.15",
     "uuid": "^3.3.3"
   },
-  "files": ["dist/**/*"]
+  "files": [
+    "dist/**/*"
+  ]
 }

@@ -8,8 +8,8 @@ interface Subscribers {
 
 export class LocationCast {
   public readonly search: string = '';
-
   public readonly pathname: string = '';
+  public readonly hash: string = '';
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public readonly state: any;
@@ -18,10 +18,12 @@ export class LocationCast {
     this.state = history.state;
     this.search = location.search;
     this.pathname = location.pathname;
+    this.hash = location.hash;
   }
 
   public isUpdated = (history: History, location: Location): boolean => this.pathname !== location.pathname
     || this.search !== location.search
+    || this.hash !== location.hash
     || !isEqual(
       this.state,
       history.state,
@@ -33,10 +35,12 @@ class HistoryObserver {
   private subscribers: Subscribers = {};
 
   private watcherInterval?: number;
+  private readonly watchTimeout: number;
 
   public location: LocationCast;
 
-  public constructor() {
+  public constructor(watchTimeout: number = 500) {
+    this.watchTimeout = watchTimeout;
     this.location = new LocationCast(window.history, window.location);
   }
 
@@ -65,7 +69,7 @@ class HistoryObserver {
   };
 
   private startWatcher = (): void => {
-    this.watcherInterval = window.setInterval(this.watch, 100);
+    this.watcherInterval = window.setInterval(this.watch, this.watchTimeout);
   };
 
   private stopWatcher = (): void => {
